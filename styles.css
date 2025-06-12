@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+    
+}
+
 :root {
   --base-color: rgb(51, 51, 51);
   --base-text: rgb(255,237,41);
@@ -101,7 +114,17 @@ nav p {
     font-size: 6rem;
     text-align: center;
     margin: 4rem;
-    padding: 4rem;;
+    padding: 4rem;
+}
+
+#main-page-heading::after {
+    content: '';
+    display: inline-block;
+    background-color: var(--accent-color);
+    animation: blink 0.7s step-end infinite; 
+    width: 3.5rem;
+    height: 6rem;
+    justify-content: center;
 }
 
 header p {
