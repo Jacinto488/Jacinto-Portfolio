@@ -206,7 +206,6 @@ header p {
 }
 
 footer {
-    position: absolute;
     text-align: center;
     padding-top: 1rem;
     font-size: 1.2rem;
@@ -253,6 +252,7 @@ footer {
     position: relative;
     transition: 0.5s;
     filter: blur(5px);
+    margin-bottom: 3rem;
 }
 
 .project-card img {

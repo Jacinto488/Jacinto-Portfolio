@@ -15,31 +15,3 @@ function typeWriter() {
 };
 
 window.onload = typeWriter;
-
-//Theme switching functionality
-let lightmode = localStorage.getItem("lightmode"); // Check if dark mode is enabled in local storage
-const themeSwitch = document.getElementById("theme-switch"); // Get the theme switch button
-
-const enableLightMode = () => {
-    document.body.classList.add("lightmode"); // Add light mode class to body
-    localStorage.setItem("lightmode", "active"); // Store the state in local storage
-    lightmode = "active"; // Update the variable
-};
-
-const disableLightMode = () => {
-    document.body.classList.remove("lightmode"); // Remove light mode class from body
-    localStorage.setItem("lightmode", null); // Clear the state in local storage
-    lightmode = null; // Update the variable
-};
-
-if(lightmode === 'active') {
-    enableLightMode(); // Enable light mode if it was previously set
-}
-
-themeSwitch.addEventListener("click", () => {
-    if (lightmode !== 'active') {
-        enableLightMode();
-    } else {
-        disableLightMode();
-    }
-});
